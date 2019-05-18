@@ -30,8 +30,8 @@ Registers a new user and returns its access token.
       "phones": [
         {
           "number": 988887888,
-          "areaCode": 81,
-          "countryCode": "+55"
+          "area_code": 81,
+          "country_code": "+55"
         }
       ]
     }
@@ -155,12 +155,12 @@ Returns user details.
       "phones": [
         {
           "number": 988887888,
-          "areaCode": 81,
-          "countryCode": "+55"
+          "area_code": 81,
+          "country_code": "+55"
         }
       ],
-      "createdAt": "2019-05-17T04:12:27.081+0000",
-      "lastLogin": "2019-05-17T04:12:27.107+0000"
+      "created_at": "2019-05-17T04:12:27.081+0000",
+      "last_login": "2019-05-17T04:12:27.107+0000"
     }
 
 #### Error Response:
