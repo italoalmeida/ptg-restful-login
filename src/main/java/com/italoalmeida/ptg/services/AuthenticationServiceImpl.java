@@ -35,9 +35,9 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 		String token = jwtTokenUtil.doGenerateToken(new JwtUser(user));
 		
 		// Get login date from the token which was just generated
-		Date userLastLogin = jwtTokenUtil.getUserFromToken(token).getLastLogin();
+		Date userLastLogin = jwtTokenUtil.getUserFromToken(token).getLast_login();
 		// Then update user last login date
-		user.setLastLogin(userLastLogin);
+		user.setLast_login(userLastLogin);
 		userRepository.save(user);
 		
 		return new Token(token);

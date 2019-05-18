@@ -49,13 +49,13 @@ public class User implements Serializable {
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Phone> phones;
 	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(updatable = true)
-	private Date lastLogin;
-	
 	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date createdAt;
+	private Date created_at;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(updatable = true)
+	private Date last_login;
 
 	public User() {
 		super();
@@ -120,20 +120,20 @@ public class User implements Serializable {
 		this.phones = phones;
 	}
 
-	public Date getCreatedAt() {
-		return createdAt;
+	public Date getCreated_at() {
+		return created_at;
 	}
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
+	public void setCreated_at(Date created_at) {
+		this.created_at = created_at;
 	}
 
-	public Date getLastLogin() {
-		return lastLogin;
+	public Date getLast_login() {
+		return last_login;
 	}
 
-	public void setLastLogin(Date lastLogin) {
-		this.lastLogin = lastLogin;
+	public void setLast_login(Date last_login) {
+		this.last_login = last_login;
 	}
-
+	
 }

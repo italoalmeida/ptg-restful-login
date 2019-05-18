@@ -12,7 +12,7 @@ import javax.persistence.UniqueConstraint;
  *
  */
 @Entity
-@Table(name = "PHONE", uniqueConstraints = {@UniqueConstraint(columnNames = {"number", "areaCode", "countryCode"})})
+@Table(name = "PHONE", uniqueConstraints = {@UniqueConstraint(columnNames = {"number", "area_code", "country_code"})})
 public class Phone implements Serializable {
 
 	private static final long serialVersionUID = -4353061489840065831L;
@@ -21,20 +21,20 @@ public class Phone implements Serializable {
 	private Integer number;
 	
 	@Id
-	private Integer areaCode;
+	private Integer area_code;
 	
 	@Id
-	private String countryCode;
+	private String country_code;
 	
 	public Phone() {
 		super();
 	}
 
-	public Phone(Integer number, Integer areaCode, String countryCode) {
+	public Phone(Integer number, Integer area_code, String country_code) {
 		super();
 		this.number = number;
-		this.areaCode = areaCode;
-		this.countryCode = countryCode;
+		this.area_code = area_code;
+		this.country_code = country_code;
 	}
 
 	public Integer getNumber() {
@@ -45,20 +45,20 @@ public class Phone implements Serializable {
 		this.number = number;
 	}
 
-	public Integer getAreaCode() {
-		return areaCode;
+	public Integer getArea_code() {
+		return area_code;
 	}
 
-	public void setAreaCode(Integer areaCode) {
-		this.areaCode = areaCode;
+	public void setArea_code(Integer area_code) {
+		this.area_code = area_code;
 	}
 
-	public String getCountryCode() {
-		return countryCode;
+	public String getCountry_code() {
+		return country_code;
 	}
 
-	public void setCountryCode(String countryCode) {
-		this.countryCode = countryCode;
+	public void setCountry_code(String country_code) {
+		this.country_code = country_code;
 	}
-
+	
 }

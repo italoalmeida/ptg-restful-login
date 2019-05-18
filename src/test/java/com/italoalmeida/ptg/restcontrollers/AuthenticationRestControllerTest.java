@@ -43,8 +43,8 @@ public class AuthenticationRestControllerTest extends RestControllerTest {
 		// given
 		phone
 		.put("number", 775555555)
-		.put("areaCode", 83)
-		.put("countryCode", "+55");
+		.put("area_code", 83)
+		.put("country_code", "+55");
 		
 		user
 		.put("firstName", "Java")
@@ -66,8 +66,8 @@ public class AuthenticationRestControllerTest extends RestControllerTest {
 		// given
 		phone
 		.put("number", 775555555)
-		.put("areaCode", 83)
-		.put("countryCode", "+55");
+		.put("area_code", 83)
+		.put("country_code", "+55");
 		
 		user
 		.put("firstName", "Java")
@@ -98,8 +98,8 @@ public class AuthenticationRestControllerTest extends RestControllerTest {
 		// given
 		phone
 		.put("number", 775555555)
-		.put("areaCode", 83)
-		.put("countryCode", "+55");
+		.put("area_code", 83)
+		.put("country_code", "+55");
 		
 		user
 		.put("firstName", "Java")
@@ -121,13 +121,13 @@ public class AuthenticationRestControllerTest extends RestControllerTest {
 		// given
 		phone
 		.put("number", 775555555)
-		.put("areaCode", 83)
-		.put("countryCode", "+55");
+		.put("area_code", 83)
+		.put("country_code", "+55");
 		
 		user
 		// missing first name field
 		.put("lastName", "Test")
-		.put("email", "email1@email.com")
+		.put("email", "java@email.com")
 		.put("password", "123456")
 		.put("phones", new JSONArray().put(phone));
 		
@@ -143,8 +143,8 @@ public class AuthenticationRestControllerTest extends RestControllerTest {
 		// given
 		phone
 		.put("number", 775555555)
-		.put("areaCode", 83)
-		.put("countryCode", "+55");
+		.put("area_code", 83)
+		.put("country_code", "+55");
 		
 		user
 		.put("firstName", "Java")
@@ -172,7 +172,7 @@ public class AuthenticationRestControllerTest extends RestControllerTest {
 		// given
 		credentials
 		// nonexistent email
-		.put("email", "jose@email.com")
+		.put("email", "java@email.com")
 		.put("password", "123456");
 		
 		// when
@@ -186,7 +186,7 @@ public class AuthenticationRestControllerTest extends RestControllerTest {
 	public void signin_missingFields_shouldReturnErrorMessage() throws Exception {
 		// given
 		credentials
-		.put("email", "joao@email.com");
+		.put("email", "java@email.com");
 		// missing password field
 		
 		// when

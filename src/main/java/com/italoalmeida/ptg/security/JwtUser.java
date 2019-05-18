@@ -23,9 +23,9 @@ public class JwtUser implements Serializable {
 	
 	private List<Phone> phones;
 	
-	private Date createdAt;
+	private Date created_at;
 	
-	private Date lastLogin;
+	private Date last_login;
 	
 	public JwtUser() {
 	}
@@ -35,8 +35,8 @@ public class JwtUser implements Serializable {
 		this.lastName = user.getLastName();
 		this.email = user.getEmail();
 		this.phones = user.getPhones();
-		this.createdAt = user.getCreatedAt();
-		this.lastLogin = user.getLastLogin();
+		this.created_at = user.getCreated_at();
+		this.last_login = user.getLast_login();
 	}
 
 	public String getFirstName() {
@@ -71,20 +71,20 @@ public class JwtUser implements Serializable {
 		this.phones = phones;
 	}
 
-	public Date getCreatedAt() {
-		return createdAt;
+	public Date getCreated_at() {
+		return created_at;
 	}
 
-	public void setCreatedAt(Date createdAt) {
-		this.createdAt = createdAt;
+	public void setCreated_at(Date created_at) {
+		this.created_at = created_at;
 	}
 
-	public Date getLastLogin() {
-		return lastLogin;
+	public Date getLast_login() {
+		return last_login;
 	}
 
-	public void setLastLogin(Date lastLogin) {
-		this.lastLogin = lastLogin;
+	public void setLast_login(Date last_login) {
+		this.last_login = last_login;
 	}
-
+	
 }

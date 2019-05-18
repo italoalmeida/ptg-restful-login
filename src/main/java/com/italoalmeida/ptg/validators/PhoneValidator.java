@@ -21,9 +21,9 @@ public class PhoneValidator implements Validator<Phone> {
 		
 		if (model.getNumber() == null) throw new MissingFieldsException();
 		
-		if (model.getAreaCode() == null) throw new MissingFieldsException();
+		if (model.getArea_code() == null) throw new MissingFieldsException();
 		
-		if (model.getCountryCode() == null) throw new MissingFieldsException();
+		if (model.getCountry_code() == null) throw new MissingFieldsException();
 	}
 
 	@Override
@@ -31,9 +31,9 @@ public class PhoneValidator implements Validator<Phone> {
 		
 		if (!isValidPositiveInteger(model.getNumber())) throw new InvalidFieldsException();
 		
-		if (!isValidPositiveInteger(model.getAreaCode())) throw new InvalidFieldsException();
+		if (!isValidPositiveInteger(model.getArea_code())) throw new InvalidFieldsException();
 		
-		if (!isVaildString(model.getCountryCode())) throw new InvalidFieldsException();
+		if (!isVaildString(model.getCountry_code())) throw new InvalidFieldsException();
 	}
 
 	@Override

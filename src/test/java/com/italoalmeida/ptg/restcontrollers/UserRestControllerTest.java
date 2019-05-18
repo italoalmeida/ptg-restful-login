@@ -42,8 +42,8 @@ public class UserRestControllerTest extends RestControllerTest {
 		// given
 		JSONObject phone = new JSONObject()
 		.put("number", 775555555)
-		.put("areaCode", 83)
-		.put("countryCode", "+55");
+		.put("area_code", 83)
+		.put("country_code", "+55");
 		
 		JSONObject user = new JSONObject()
 		.put("firstName", "Java")
@@ -65,8 +65,8 @@ public class UserRestControllerTest extends RestControllerTest {
 		error.checkThat(result.has("lastName"), equalTo(true));
 		error.checkThat(result.has("email"), equalTo(true));
 		error.checkThat(result.has("phones"), equalTo(true));
-		error.checkThat(result.has("createdAt"), equalTo(true));
-		error.checkThat(result.has("lastLogin"), equalTo(true));
+		error.checkThat(result.has("created_at"), equalTo(true));
+		error.checkThat(result.has("last_login"), equalTo(true));
 	}
 	
 	@Test
@@ -85,8 +85,8 @@ public class UserRestControllerTest extends RestControllerTest {
 		// given
 		JSONObject phone = new JSONObject()
 		.put("number", 775555555)
-		.put("areaCode", 83)
-		.put("countryCode", "+55");
+		.put("area_code", 83)
+		.put("country_code", "+55");
 		
 		JSONObject user = new JSONObject()
 		.put("firstName", "Java")
